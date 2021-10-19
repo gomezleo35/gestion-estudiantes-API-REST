@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.consultasestudiantes.mapper.ObtainQualificationsMapper">
+
+    <select
+            id="obtainQualifications"
+            resultType="com.consultasestudiantes.model.Qualification"
+    >
+        SELECT Q.ID_SUBJECT AS idSubject, S.DESCRIPTION, Q.QUALIFICATION
+        FROM QUALIFICATIONS Q, SUBJECTS S
+        WHERE S.ID = Q.ID_SUBJECT
+        AND YEAR (CREATE_DATE) = YEAR (SYSDATE)
+        AND Q.ID_STUDENT = #{studentId}
+
+</select>
+
+</mapper>
