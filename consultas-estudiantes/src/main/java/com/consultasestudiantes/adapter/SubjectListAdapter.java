@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
+import static com.consultasestudiantes.utils.ObtainAverage.obtainAverage;
+
 @Component
 public class SubjectListAdapter implements Function<List<SubjectDTO>, List<Subject>> {
 
@@ -31,15 +33,5 @@ public class SubjectListAdapter implements Function<List<SubjectDTO>, List<Subje
                 .average(obtainAverage(dto.getGrades()))
                 .build();
     }
-
-    private Double obtainAverage(List<Double> grades){
-        Double acm = 0.0;
-        for (Double g : grades){
-            acm += g;
-        }
-
-        return acm / grades.size();
-    }
-
 
 }

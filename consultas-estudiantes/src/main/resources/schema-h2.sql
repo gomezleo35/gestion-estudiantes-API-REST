@@ -92,7 +92,7 @@ ALTER TABLE STUDENT_SUBJECTS ADD FOREIGN KEY (ID_SUBJECT) REFERENCES  SUBJECTS;
 
 -- 1er endp id alumno con materias y las notas y promedio  FALTA UNITEST Y HANDLER
 -- 2do end todos los alumnos y el prod gnral
--- borrado logico, 3er endpoint poder quitar una materia de un alumno,
+-- borrado logico, 3er endpoint poder quitar una materia de un alumno, valid Y N
 -- 4to endpoint quitar un alumno de un curso
 
 -- hacer al calculo en la capa de datos del calculo del promedio gral de una materia.

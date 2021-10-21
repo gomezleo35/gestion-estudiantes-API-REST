@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="interfaz mapper">
+<mapper namespace="com.consultasestudiantes.mapper.ObtainQualificationClassroomMapper">
 
     <select
-            id=""
-            resultType=""
+            id="obtainQualificationsClassroom"
+            resultType="com.consultasestudiantes.model.dto.QualificationClassroomDTO"
     >
         SELECT SC.ID_STUDENT AS idStudent,
+               CONCAT_WS(' ,',ST.NAME, ST.SURNAME) fullNameStudent,
                Q.ID_SUBJECT AS idSubject,
-               Q.QUALIFICATION AS qualification
-        FROM QUALIFICATIONS Q, STUDENT_CLASSROOMS SC, STUDENT_SUBJECTS SS
+               S.DESCRIPTION AS description,
+               Q.QUALIFICATION AS qualification,
+               CONCAT_WS(' ', CL.GRADE, CL.LETTER) nameClassroom
+        FROM QUALIFICATIONS Q, STUDENT_CLASSROOMS SC,
+             STUDENT_SUBJECTS SS, SUBJECTS S,
+             STUDENTS ST, CLASSROOMS CL
         WHERE Q.ID_STUDENT = SC.ID_STUDENT
+            AND CL.ID = SC.ID_CLASSROOM
+            AND Q.ID_STUDENT = ST.ID
             AND SC.ID_STUDENT = SS.ID_STUDENT
             AND Q.ID_SUBJECT = SS.ID_SUBJECT
+            AND S.ID = Q.ID_SUBJECT
             AND YEAR (Q.CREATE_DATE) = YEAR (SYSDATE)
             AND SS.END_DATE IS NULL
             AND SC.END_DATE IS NULL
-            AND SC.ID_CLASSROOM = #{classroomId}
+            AND SC.ID_CLASSROOM = #{idClassroom}
 
 </select>
 

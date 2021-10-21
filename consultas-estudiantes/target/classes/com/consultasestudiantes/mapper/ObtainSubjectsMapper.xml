@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.consultasestudiantes.mapper.ObtainSubjectsMapper">
+
+    <select
+            id="obtainSubjects"
+            resultType="com.consultasestudiantes.model.EnrolledSubject"
+            parameterType="com.consultasestudiantes.model.dto.DeleteSubjectDTO"
+    >
+        SELECT  SS.ID_SUBJECT AS idSubject,
+                S.DESCRIPTION AS description
+        FROM STUDENT_SUBJECTS SS, SUBJECTS S
+        WHERE S.ID = SS.ID_SUBJECT
+          AND SS.END_DATE IS NULL
+          AND SS.ID_STUDENT = #{deleteSubjectDTO.idStudent}
+    </select>
+
+</mapper>

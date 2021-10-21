@@ -34,5 +34,4 @@ public class QualificationsServiceImp implements QualificationsService {
                 subjectDtoListAdapter.apply(qualificationsClient.obtainQualifications(studentId))
         );
     }
-
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.consultasestudiantes.mapper.DeleteSubjectStudentMapper">
+
+    <update
+            id="deleteSubjectStudent"
+            parameterType="com.consultasestudiantes.model.dto.DeleteSubjectDTO"
+    >
+        UPDATE STUDENT_SUBJECTS
+        SET END_DATE = SYSDATE,
+            STATUS = 0
+        WHERE ID_STUDENT = #{deleteSubjectDTO.idStudent}
+          AND ID_SUBJECT = #{deleteSubjectDTO.idSubject}
+
+</update>
+
+</mapper>

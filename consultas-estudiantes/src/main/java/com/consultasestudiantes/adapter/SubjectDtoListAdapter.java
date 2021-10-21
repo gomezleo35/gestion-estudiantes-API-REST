@@ -11,7 +11,7 @@ import java.util.function.Function;
 import static com.google.common.collect.Lists.newArrayList;
 
 @Component
-public class SubjectDtoListAdapter implements Function<List<Qualification>, List<SubjectDTO>> {
+    public class SubjectDtoListAdapter implements Function<List<Qualification>, List<SubjectDTO>> {
 
     @Override
     public List<SubjectDTO> apply(List<Qualification> qualifications) {
