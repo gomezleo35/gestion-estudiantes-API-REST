@@ -7,5 +7,5 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 @Mapper
 public interface ObtainQualificationClassroomMapper {
-    List<QualificationClassroomDTO> obtainQualificationsClassroom (@Param("idClassroom") Integer idClassroom);
+    List<QualificationClassroomDTO> obtainQualificationsClassroom (@Param("idClassroom") String idClassroom);
 }

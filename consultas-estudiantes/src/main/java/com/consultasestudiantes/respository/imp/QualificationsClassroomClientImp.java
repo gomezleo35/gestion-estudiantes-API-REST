@@ -19,7 +19,7 @@ public class QualificationsClassroomClientImp implements QualificationsClassroom
     }
 
     @Override
-    public List<QualificationClassroomDTO> obtainQualificationsClassroom(Integer idClassroom) {
+    public List<QualificationClassroomDTO> obtainQualificationsClassroom(String idClassroom) {
         return obtainQualificationClassroomMapper.obtainQualificationsClassroom(idClassroom);
     }
 }

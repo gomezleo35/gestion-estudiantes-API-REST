@@ -31,7 +31,7 @@ public class QualificationClassroomServiceImp implements QualificationsClassroom
 
 
     @Override
-    public Classroom obtainClassroom(Integer classroomId) {
+    public Classroom obtainClassroom(String classroomId) {
         List<QualificationClassroomDTO> qualificationsRoom = qualificationsClassroomClient
                 .obtainQualificationsClassroom(classroomId);
         List<StudentQualificationsDTO> qualificationsDTOS = studentDtoListAdapter.apply(qualificationsRoom);

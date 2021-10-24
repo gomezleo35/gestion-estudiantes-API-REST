@@ -14,5 +14,5 @@ import lombok.NoArgsConstructor;
 public class QualificationClassroomRequest {
 
     @ApiModelProperty(notes = "Id del curso", example = "1", required = true)
-    private Integer idClassroom;
+    private String idClassroom;
 }

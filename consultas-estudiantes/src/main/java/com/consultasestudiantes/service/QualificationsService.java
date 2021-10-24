@@ -5,5 +5,5 @@ import com.consultasestudiantes.model.Subject;
 import java.util.List;
 
 public interface QualificationsService {
-    List<Subject> obtainQualifications (Integer studentId);
+    List<Subject> obtainQualifications (String studentId);
 }

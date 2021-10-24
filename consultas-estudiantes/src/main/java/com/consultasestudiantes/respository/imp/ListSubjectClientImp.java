@@ -3,6 +3,7 @@ package com.consultasestudiantes.respository.imp;
 import com.consultasestudiantes.mapper.ObtainSubjectsMapper;
 import com.consultasestudiantes.model.EnrolledSubject;
 import com.consultasestudiantes.model.dto.DeleteSubjectDTO;
+import com.consultasestudiantes.model.http.DeleteSubjectRequest;
 import com.consultasestudiantes.respository.ListSubjectClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

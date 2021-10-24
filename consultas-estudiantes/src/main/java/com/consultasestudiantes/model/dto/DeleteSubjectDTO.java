@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 public class DeleteSubjectDTO {
 
     @ApiModelProperty(notes = "Id de estudiante", example = "1", required = true)
-    private Integer idStudent;
+    private String idStudent;
 
     @ApiModelProperty(notes = "Id de materia", example = "1", required = true)
-    private Integer idSubject;
+    private String idSubject;
 }

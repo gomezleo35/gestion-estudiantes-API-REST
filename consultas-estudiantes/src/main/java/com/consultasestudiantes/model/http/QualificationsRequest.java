@@ -14,5 +14,5 @@ import lombok.NoArgsConstructor;
 public class QualificationsRequest {
 
     @ApiModelProperty(notes = "Id del estudiante", example = "1", required = true)
-    private Integer studentId;    // lo mismo que el DTO
+    private String studentId;
 }

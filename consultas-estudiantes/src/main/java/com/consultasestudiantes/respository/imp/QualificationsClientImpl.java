@@ -19,7 +19,7 @@ public class QualificationsClientImpl implements QualificationsClient {
     }
 
     @Override
-    public List<Qualification> obtainQualifications(Integer studentId) {
+    public List<Qualification> obtainQualifications(String studentId) {
         return qualificationsMapper.obtainQualifications(studentId);
     }
 }

@@ -4,5 +4,5 @@ import com.consultasestudiantes.model.Classroom;
 
 public interface QualificationsClassroomService {
 
-    Classroom obtainClassroom (Integer classroomId);
+    Classroom obtainClassroom (String classroomId);
 }

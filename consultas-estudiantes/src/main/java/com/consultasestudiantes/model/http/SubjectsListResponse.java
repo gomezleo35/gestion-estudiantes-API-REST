@@ -16,4 +16,5 @@ import java.util.List;
 public class SubjectsListResponse {
 
     private List<EnrolledSubject> enrolledSubjectList;
+    private String errorMessage;
 }

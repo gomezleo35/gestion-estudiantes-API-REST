@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface DeleteSubjectService {
 
-    List<EnrolledSubject>deleteSubject (DeleteSubjectDTO deleteSubjectDTO);
+    List<EnrolledSubject> deleteSubject (DeleteSubjectDTO deleteSubjectDTO);
 }

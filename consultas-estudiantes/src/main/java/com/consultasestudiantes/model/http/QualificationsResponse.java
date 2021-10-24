@@ -12,7 +12,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-
 public class QualificationsResponse {
 
     private List<Subject> studentQualifications;

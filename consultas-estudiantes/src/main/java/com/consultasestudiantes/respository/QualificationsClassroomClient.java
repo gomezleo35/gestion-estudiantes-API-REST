@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface QualificationsClassroomClient {
 
-    List<QualificationClassroomDTO> obtainQualificationsClassroom(Integer idClassroom);
+    List<QualificationClassroomDTO> obtainQualificationsClassroom(String idClassroom);
 }

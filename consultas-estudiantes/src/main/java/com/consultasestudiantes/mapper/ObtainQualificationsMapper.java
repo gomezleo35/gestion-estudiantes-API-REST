@@ -9,5 +9,5 @@ import java.util.List;
 @Mapper
 public interface ObtainQualificationsMapper {
 
-    List<Qualification> obtainQualifications (@Param("studentId") Integer studentId);
+    List<Qualification> obtainQualifications (@Param("studentId") String studentId);
 }
