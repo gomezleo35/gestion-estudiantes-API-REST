@@ -4,6 +4,7 @@ import com.consultasestudiantes.handler.DeleteSubjectStudentHandler;
 import com.consultasestudiantes.model.http.DeleteSubjectRequest;
 import com.consultasestudiantes.model.http.QualificationsResponse;
 import com.consultasestudiantes.model.http.SubjectsListResponse;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Api("Controlador para eliminar materias de un estudiante activo")
 public class DeleteSubjectStudentController {
 
     private final Logger logger = LoggerFactory.getLogger(ObtainQualificationsController.class);

@@ -5,6 +5,7 @@ import com.consultasestudiantes.model.http.ClassroomResponse;
 import com.consultasestudiantes.model.http.QualificationClassroomRequest;
 import com.consultasestudiantes.model.http.QualificationsClassroomResponse;
 import com.consultasestudiantes.model.http.QualificationsResponse;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Api("Controlador para obtener el promedio general del curso y de cada estudiante")
 public class ObtainQualificationsClassroomController {
 
     private final Logger logger = LoggerFactory.getLogger(ObtainQualificationsController.class);

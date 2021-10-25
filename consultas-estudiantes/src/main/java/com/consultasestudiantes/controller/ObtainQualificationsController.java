@@ -2,6 +2,7 @@ package com.consultasestudiantes.controller;
 
 import com.consultasestudiantes.handler.QualificationsHandler;
 import com.consultasestudiantes.model.http.*;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Api("Controlador para obtener el promedio general de cada una de las materias de un estudiante")
 public class ObtainQualificationsController {
 
     private final Logger logger = LoggerFactory.getLogger(ObtainQualificationsController.class);
@@ -31,7 +33,7 @@ public class ObtainQualificationsController {
     @PostMapping(value = "/students/id")
     @ApiOperation("obtener informacion del estudiante por ID")
     @ApiResponses({
-            @ApiResponse(code = 200, message = "OK", response = QualificationsResponse.class),                      //a partir de aca se crea el package http
+            @ApiResponse(code = 200, message = "OK", response = QualificationsResponse.class),
             @ApiResponse(code = 400, message = "Parametros mal ingresados", response = QualificationsResponse.class),
             @ApiResponse(code = 500, message = "Fallo interno", response = QualificationsResponse.class)})
 

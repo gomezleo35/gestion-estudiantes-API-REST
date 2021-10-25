@@ -9,7 +9,7 @@
     >
         UPDATE STUDENT_SUBJECTS
         SET END_DATE = SYSDATE,
-            STATUS = 0
+            STATUS = 'N'
         WHERE ID_STUDENT = #{deleteSubject.idStudent}
           AND ID_SUBJECT = #{deleteSubject.idSubject}
 
