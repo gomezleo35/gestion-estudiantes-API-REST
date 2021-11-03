@@ -12,7 +12,7 @@ public class DeleteRequestAdapterTest {
 
     @Test
     @DisplayName("Should return dto model correctly")
-    public void shoul_return_dto_model_correctly() {
+    public void should_return_dto_model_correctly() {
         DeleteRequestAdapter adapter = new DeleteRequestAdapter();
         final String idStudent = "1";
         final String idSubject = "2";

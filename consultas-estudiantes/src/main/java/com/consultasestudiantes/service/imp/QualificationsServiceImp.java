@@ -30,6 +30,8 @@ public class QualificationsServiceImp implements QualificationsService {
     @Override
     public List<Subject> obtainQualifications(String studentId) {
 
+
+
         return subjectListAdapter.apply(
                 subjectDtoListAdapter.apply(qualificationsClient.obtainQualifications(studentId))
         );

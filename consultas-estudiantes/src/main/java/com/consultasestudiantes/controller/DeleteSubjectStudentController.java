@@ -23,7 +23,7 @@ public class DeleteSubjectStudentController {
 
     private static final String REQUEST_MESSAGE = "Request materia del alumno que desea eliminar, student: {}";
     private static final String BAD_REQUEST_MESSAGE = "Los campos son obligatorios o invalidos, o no estan presente: {}";
-    private static final String UNKNOWN_ERROR_MESSAGE = "Ocurrio un error desconocido al intentar cambiar el pin: {}";
+    private static final String UNKNOWN_ERROR_MESSAGE = "Ocurrio un error desconocido al intentar eliminar una amteria: {}";
 
     private final DeleteSubjectStudentHandler deleteSubjectStudentHandler;
 
@@ -34,9 +34,9 @@ public class DeleteSubjectStudentController {
     @PostMapping(value = "/subject")
     @ApiOperation("Eliminar materia de un estudiante")
     @ApiResponses({
-            @ApiResponse(code = 200, message = "OK", response = QualificationsResponse.class),
-            @ApiResponse(code = 400, message = "Parametros mal ingresados", response = QualificationsResponse.class),
-            @ApiResponse(code = 500, message = "Fallo interno", response = QualificationsResponse.class)})
+            @ApiResponse(code = 200, message = "OK", response = SubjectsListResponse.class),
+            @ApiResponse(code = 400, message = "Parametros mal ingresados", response = SubjectsListResponse.class),
+            @ApiResponse(code = 500, message = "Fallo interno", response = SubjectsListResponse.class)})
 
 
     public ResponseEntity<SubjectsListResponse> deleteSubject (@RequestBody DeleteSubjectRequest deleteSubjectRequest) {

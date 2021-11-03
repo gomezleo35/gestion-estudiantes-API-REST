@@ -22,7 +22,7 @@ public class ObtainQualificationsController {
 
     private static final String REQUEST_MESSAGE = "Request notas de un curso, student: {}";
     private static final String BAD_REQUEST_MESSAGE = "Los campos son obligatorios o invalidos, o no estan presente: {}";
-    private static final String UNKNOWN_ERROR_MESSAGE = "Ocurrio un error desconocido al intentar cambiar el pin: {}";
+    private static final String UNKNOWN_ERROR_MESSAGE = "Ocurrio un error desconocido al intentar consultar las notas del estudiante: {}";
 
     private final QualificationsHandler qualificationsHandler;
 

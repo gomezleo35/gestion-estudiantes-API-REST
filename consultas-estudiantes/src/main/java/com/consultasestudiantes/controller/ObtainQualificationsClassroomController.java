@@ -25,7 +25,7 @@ public class ObtainQualificationsClassroomController {
 
     private static final String REQUEST_MESSAGE = "Request notas de alumno, student: {}";
     private static final String BAD_REQUEST_MESSAGE = "Los campos son obligatorios o invalidos, o no estan presente: {}";
-    private static final String UNKNOWN_ERROR_MESSAGE = "Ocurrio un error desconocido al intentar cambiar el pin: {}";
+    private static final String UNKNOWN_ERROR_MESSAGE = "Ocurrio un error desconocido al intentar consultar las notas del curso: {}";
 
     private final QualificationsClassroomHandler qualificationsClassroomHandler;
 
@@ -36,9 +36,9 @@ public class ObtainQualificationsClassroomController {
     @PostMapping(value = "/classroom/id")
     @ApiOperation("Obtener notas y promedio de un curso")
     @ApiResponses({
-            @ApiResponse(code = 200, message = "OK", response = ClassroomResponse.class),
-            @ApiResponse(code = 400, message = "Parametros mal ingresados", response = ClassroomResponse.class),
-            @ApiResponse(code = 500, message = "Fallo interno", response = ClassroomResponse.class)})
+            @ApiResponse(code = 200, message = "OK", response = QualificationsClassroomResponse.class),
+            @ApiResponse(code = 400, message = "Parametros mal ingresados", response = QualificationsClassroomResponse.class),
+            @ApiResponse(code = 500, message = "Fallo interno", response = QualificationsClassroomResponse.class)})
 
     public ResponseEntity<QualificationsClassroomResponse> obtainQualificationsClassroom (@RequestBody QualificationClassroomRequest request){
 
