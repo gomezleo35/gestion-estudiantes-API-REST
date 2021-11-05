@@ -50,7 +50,7 @@ class QualificationsClientImplTest {
 
         List<Qualification> actualQualificationList = sut.obtainQualifications(studentId);
 
-        assertThat(actualQualificationList.get(0),is(qualifications.get(0)));
+        assertThat(actualQualificationList.get(0).getQualification(),is(qualifications.get(0).getQualification()));
     }
 
 }

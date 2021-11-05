@@ -101,6 +101,5 @@ class QualificationsServiceImpTest   {
         assertThat(actualSubjectList.get(0).getId(), is(subjects.get(0).getId()));
         assertThat(actualSubjectList.get(0).getDescription(), is(subjects.get(0).getDescription()));
         assertThat(actualSubjectList.get(0).getAverage(), is(subjects.get(0).getAverage()));
-
     }
 }

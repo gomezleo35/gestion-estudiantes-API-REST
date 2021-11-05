@@ -25,8 +25,12 @@ class DeleteSubjectClientImpTest {
     }
 
     @Test
-    public void delete_corctly_funtion (){
-        DeleteSubjectDTO deleteSubjectDTO = new DeleteSubjectDTO();
+    public void delete_correctly_function (){
+        DeleteSubjectDTO deleteSubjectDTO = DeleteSubjectDTO.builder()
+                .idSubject("1")
+                .idStudent("1")
+                .build();
+
         sut.deleteSubject(deleteSubjectDTO);
 
         verify(mockDeleteSubjectStudentMapper).deleteSubjectStudent(deleteSubjectDTO);

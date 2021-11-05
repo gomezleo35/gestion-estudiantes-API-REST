@@ -5,7 +5,6 @@ import com.consultasestudiantes.model.Subject;
 import com.consultasestudiantes.model.http.QualificationsRequest;
 import com.consultasestudiantes.model.http.QualificationsResponse;
 import com.consultasestudiantes.service.QualificationsService;
-import com.consultasestudiantes.service.imp.QualificationsServiceImp;
 import com.consultasestudiantes.validator.Validator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,9 +13,6 @@ import org.mockito.Mock;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.google.common.collect.Lists.newArrayList;
-import static org.mockito.MockitoAnnotations.initMocks;
-import static com.google.common.collect.Lists.newArrayList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Mockito.when;
