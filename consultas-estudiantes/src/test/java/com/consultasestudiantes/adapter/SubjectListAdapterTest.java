@@ -22,11 +22,8 @@ class SubjectListAdapterTest {
 
         grades.add(1.5);
         grades.add(8.5);
-
-
         gradesTwo.add(5.5);
         gradesTwo.add(6.5);
-
 
         subjectDTOList.add(SubjectDTO.builder()
                 .id(1)
